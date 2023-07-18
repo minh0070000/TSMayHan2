@@ -1,0 +1,145 @@
+﻿@model TSMayHan2.Models.parameter
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>parameter</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.id_parameter)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.id_parameter)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.machine_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.standard.machine_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cycle)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.cycle)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.string_time)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.string_time)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.pk_pwr)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.pk_pwr)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.energy)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.energy)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.total_abs)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.total_abs)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.weld_col)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.weld_col)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.total_col)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.total_col)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.trigger_force)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.trigger_force)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.weld_force)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.weld_force)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.freq_chg)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.freq_chg)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.set_ampA)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.set_ampA)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.set_ampB)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.set_ampB)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.velocity)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.velocity)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.device_id)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.device_id)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.port_name)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.port_name)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.create_at)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.create_at)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.create_by)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.create_by)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.last_modify_at)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.last_modify_at)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.last_modify_by)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.last_modify_by)
+        </dd>
+        
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.id_parameter">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

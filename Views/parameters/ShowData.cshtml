@@ -1,0 +1,124 @@
+﻿@using static Humanizer.On;
+@model List<string>
+
+<h1>Dữ liệu biểu đồ  @ViewBag.Label</h1>
+
+<p>@string.Join(", ", ViewBag.PropertyValues)</p>
+<p>@ViewBag.MaxData</p>
+<p>min @ViewBag.min</p>
+<p>max @ViewBag.max</p>
+
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="https://code.highcharts.com/modules/accessibility.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<figure class="highcharts-figure">
+    <div id="container"></div>
+    <p class="highcharts-description">
+
+    </p>
+</figure>
+<div id="chart"></div>
+
+<script>
+    
+    var options = {
+        series: [{
+            name: '',
+            data: [@string.Join(", ", ViewBag.PropertyValues)]
+        }],
+        chart: {
+            type: 'area',
+            stacked: false,
+            height: 350,
+            zoom: {
+                type: 'x',
+                enabled: true,
+                autoScaleYaxis: true
+            },
+            toolbar: {
+                autoSelected: 'zoom'
+            }
+        },
+        dataLabels: {
+            enabled: false
+        },
+        markers: {
+            size: 0,
+        },
+        title: {
+            text: '',
+            align: 'left'
+        },
+        fill: {
+            type: 'gradient',
+            gradient: {
+                shadeIntensity: 1,
+                inverseColors: false,
+                opacityFrom: 0.5,
+                opacityTo: 0,
+                stops: [0, 90, 100]
+            },
+        },
+        yaxis: {
+            min: @ViewBag.MinData > 0 ? @ViewBag.MinData * 0.8 : @ViewBag.MinData *1.2,
+            max: @ViewBag.MaxData > 0 ? @ViewBag.MaxData  * 1.2 : @ViewBag.MaxData  * 0.8,
+            labels: {
+                formatter: function (val) {
+                    return (val / 1).toFixed(0);
+                },
+            },
+            title: {
+                text: ''
+            },
+        },
+        xaxis: {
+            type: 'numeric', // Thay đổi kiểu x thành numeric
+        },
+
+        annotations: {
+            yaxis: [{
+                y: @ViewBag.min,
+                borderColor: '#FF0000',
+                label: {
+                    text: '3',
+                    style: {
+                        color: '#FF0000',
+                        background: '#FF0000'
+                    }
+                }
+            }, {
+                y: @ViewBag.max,
+                borderColor: '#FF0000',
+                label: {
+                    text: '0.2',
+                    style: {
+                        color: '#FF0000',
+                        background: '#FF0000'
+                    }
+                },
+
+
+            }]
+        },
+        tooltip: {
+            shared: false,
+            y: {
+                formatter: function (val) {
+                    return val.toFixed(3)
+                }
+            },
+            x: {
+                formatter: function (val) {
+                    return val.toFixed(0);
+                }
+            }
+        }
+    };
+
+
+    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    chart.render();
+</script>

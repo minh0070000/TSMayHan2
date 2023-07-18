@@ -1,0 +1,181 @@
+﻿@model IEnumerable<TSMayHan2.Models.parameter>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<p>
+    <a class="fa-solid fa-file-export"style="color:green" asp-action="ExportToExcel"> Export to Excel</a>
+</p>
+
+<span>Chọn máy </span>
+<span>Chọn thông số </span>
+<form asp-controller="parameters" asp-action="ShowData" method="post">
+    <select name="selectedMachine">
+        @foreach (var property in ViewBag.selectmay)
+        {
+            <option value="@property">@property</option>
+        }
+    </select>
+    <select name="selectedProperty">
+        @foreach (var property in ViewBag.properties)
+        {
+            <option value="@property">@property</option>
+        }
+    </select>
+
+    <input type="submit" value="Show Data" />
+</form>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+@using (Html.BeginForm("Index", "parameters", FormMethod.Get))
+{
+    <div style="width:500px" class="form-group">
+        @Html.DropDownList("searchQuery", ViewBag.MachineNames as SelectList, "Chọn tên máy", new { @class = "form-control" })
+        <button type="submit" class="btn btn-primary">Choose</button>
+    </div>
+}
+<div style="max-width:100%;
+     overflow-x: auto;">
+<table class="table" >
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.machine_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cycle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.string_time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pk_pwr)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.energy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_abs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.weld_col)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_col)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.trigger_force)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.weld_force)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.freq_chg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.set_ampA)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.set_ampB)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.velocity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.device_id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.port_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.create_at)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.create_by)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.last_modify_at)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.last_modify_by)
+            </th>
+            
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.standard.machine_name)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cycle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.string_time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pk_pwr)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.energy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_abs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.weld_col)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_col)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trigger_force)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.weld_force)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.freq_chg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.set_ampA)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.set_ampB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.velocity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.device_id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.port_name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.create_at)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.create_by)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.last_modify_at)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.last_modify_by)
+            </td>
+            
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id_parameter">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id_parameter">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id_parameter">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

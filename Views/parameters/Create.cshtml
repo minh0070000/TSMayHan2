@@ -1,0 +1,127 @@
+﻿@model TSMayHan2.Models.parameter
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>parameter</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="machine_name" class="control-label"></label>
+                <select asp-for="machine_name" class ="form-control" asp-items="ViewBag.machine_name"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="cycle" class="control-label"></label>
+                <input asp-for="cycle" class="form-control" />
+                <span asp-validation-for="cycle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="string_time" class="control-label"></label>
+                <input asp-for="string_time" class="form-control" />
+                <span asp-validation-for="string_time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pk_pwr" class="control-label"></label>
+                <input asp-for="pk_pwr" class="form-control" />
+                <span asp-validation-for="pk_pwr" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="energy" class="control-label"></label>
+                <input asp-for="energy" class="form-control" />
+                <span asp-validation-for="energy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total_abs" class="control-label"></label>
+                <input asp-for="total_abs" class="form-control" />
+                <span asp-validation-for="total_abs" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="weld_col" class="control-label"></label>
+                <input asp-for="weld_col" class="form-control" />
+                <span asp-validation-for="weld_col" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total_col" class="control-label"></label>
+                <input asp-for="total_col" class="form-control" />
+                <span asp-validation-for="total_col" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="trigger_force" class="control-label"></label>
+                <input asp-for="trigger_force" class="form-control" />
+                <span asp-validation-for="trigger_force" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="weld_force" class="control-label"></label>
+                <input asp-for="weld_force" class="form-control" />
+                <span asp-validation-for="weld_force" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="freq_chg" class="control-label"></label>
+                <input asp-for="freq_chg" class="form-control" />
+                <span asp-validation-for="freq_chg" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="set_ampA" class="control-label"></label>
+                <input asp-for="set_ampA" class="form-control" />
+                <span asp-validation-for="set_ampA" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="set_ampB" class="control-label"></label>
+                <input asp-for="set_ampB" class="form-control" />
+                <span asp-validation-for="set_ampB" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="velocity" class="control-label"></label>
+                <input asp-for="velocity" class="form-control" />
+                <span asp-validation-for="velocity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="device_id" class="control-label"></label>
+                <input asp-for="device_id" class="form-control" />
+                <span asp-validation-for="device_id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="port_name" class="control-label"></label>
+                <input asp-for="port_name" class="form-control" />
+                <span asp-validation-for="port_name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="create_at" class="control-label"></label>
+                <input asp-for="create_at" class="form-control" />
+                <span asp-validation-for="create_at" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="create_by" class="control-label"></label>
+                <input asp-for="create_by" class="form-control" />
+                <span asp-validation-for="create_by" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="last_modify_at" class="control-label"></label>
+                <input asp-for="last_modify_at" class="form-control" />
+                <span asp-validation-for="last_modify_at" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="last_modify_by" class="control-label"></label>
+                <input asp-for="last_modify_by" class="form-control" />
+                <span asp-validation-for="last_modify_by" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

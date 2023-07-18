@@ -1,0 +1,170 @@
+﻿@model TSMayHan2.Models.standard
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>standard</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="machine_name" />
+            
+            <div class="form-group">
+                <label asp-for="cycle_min" class="control-label"></label>
+                <input asp-for="cycle_min" class="form-control" />
+                <span asp-validation-for="cycle_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cycle_max" class="control-label"></label>
+                <input asp-for="cycle_max" class="form-control" />
+                <span asp-validation-for="cycle_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="string_time_min" class="control-label"></label>
+                <input asp-for="string_time_min" class="form-control" />
+                <span asp-validation-for="string_time_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="string_time_max" class="control-label"></label>
+                <input asp-for="string_time_max" class="form-control" />
+                <span asp-validation-for="string_time_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pk_pwr_min" class="control-label"></label>
+                <input asp-for="pk_pwr_min" class="form-control" />
+                <span asp-validation-for="pk_pwr_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pk_pwr_max" class="control-label"></label>
+                <input asp-for="pk_pwr_max" class="form-control" />
+                <span asp-validation-for="pk_pwr_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="energy_min" class="control-label"></label>
+                <input asp-for="energy_min" class="form-control" />
+                <span asp-validation-for="energy_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="energy_max" class="control-label"></label>
+                <input asp-for="energy_max" class="form-control" />
+                <span asp-validation-for="energy_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total_abs_min" class="control-label"></label>
+                <input asp-for="total_abs_min" class="form-control" />
+                <span asp-validation-for="total_abs_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total_abs_max" class="control-label"></label>
+                <input asp-for="total_abs_max" class="form-control" />
+                <span asp-validation-for="total_abs_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="weld_col_min" class="control-label"></label>
+                <input asp-for="weld_col_min" class="form-control" />
+                <span asp-validation-for="weld_col_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="weld_col_max" class="control-label"></label>
+                <input asp-for="weld_col_max" class="form-control" />
+                <span asp-validation-for="weld_col_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total_col_min" class="control-label"></label>
+                <input asp-for="total_col_min" class="form-control" />
+                <span asp-validation-for="total_col_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="total_col_max" class="control-label"></label>
+                <input asp-for="total_col_max" class="form-control" />
+                <span asp-validation-for="total_col_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="trigger_force_min" class="control-label"></label>
+                <input asp-for="trigger_force_min" class="form-control" />
+                <span asp-validation-for="trigger_force_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="trigger_force_max" class="control-label"></label>
+                <input asp-for="trigger_force_max" class="form-control" />
+                <span asp-validation-for="trigger_force_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="weld_force_min" class="control-label"></label>
+                <input asp-for="weld_force_min" class="form-control" />
+                <span asp-validation-for="weld_force_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="weld_force_max" class="control-label"></label>
+                <input asp-for="weld_force_max" class="form-control" />
+                <span asp-validation-for="weld_force_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="freq_chg_min" class="control-label"></label>
+                <input asp-for="freq_chg_min" class="form-control" />
+                <span asp-validation-for="freq_chg_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="freq_chg_max" class="control-label"></label>
+                <input asp-for="freq_chg_max" class="form-control" />
+                <span asp-validation-for="freq_chg_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="set_ampA_min" class="control-label"></label>
+                <input asp-for="set_ampA_min" class="form-control" />
+                <span asp-validation-for="set_ampA_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="set_ampA_max" class="control-label"></label>
+                <input asp-for="set_ampA_max" class="form-control" />
+                <span asp-validation-for="set_ampA_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="set_ampB_min" class="control-label"></label>
+                <input asp-for="set_ampB_min" class="form-control" />
+                <span asp-validation-for="set_ampB_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="set_ampB_max" class="control-label"></label>
+                <input asp-for="set_ampB_max" class="form-control" />
+                <span asp-validation-for="set_ampB_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="velocity_min" class="control-label"></label>
+                <input asp-for="velocity_min" class="form-control" />
+                <span asp-validation-for="velocity_min" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="velocity_max" class="control-label"></label>
+                <input asp-for="velocity_max" class="form-control" />
+                <span asp-validation-for="velocity_max" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="modify_by" class="control-label"></label>
+                <input asp-for="modify_by" class="form-control" />
+                <span asp-validation-for="modify_by" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="modify_at" class="control-label"></label>
+                <input asp-for="modify_at" class="form-control" />
+                <span asp-validation-for="modify_at" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

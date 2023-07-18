@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - web2</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/web2.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <a class="nav-link text-dark" asp-area="" asp-controller="parameters" asp-action="Index">
+                <img class="logo" src="@Url.Content("~/img/logo.png")">
+            </a>
+            <ul class="menu1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="parameters" asp-action="Index">Trang chủ</a>
+                </li>
+                
+                <li class="nav-item">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a class="nav-link text-dark" asp-area="" asp-controller="standards" asp-action="Index">Tiêu chuẩn</a>
+                    }
+                </li>
+                <li class="nav-item">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a class="nav-link text-dark" asp-area="" asp-controller="device_manage" asp-action="Index">Quản lý máy</a>
+                    }
+                </li>
+            </ul>
+        </div>
+        <div class="iconuser">
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 fill="currentColor"
+                 class="bi bi-person"
+                 style="color: #222222;"
+                 viewBox="0 0 16 16">
+                {' '}
+                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0zm4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4zm-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664h10z" />{' '}
+            </svg>
+            <ul class="dn">
+               
+                <li style="color: #222222">
+                   
+                    @if (@User.Identity.IsAuthenticated)
+                    {
+                        @User.Identity.Name 
+                    }
+                    else
+                    {
+                        <a style="margin-left:10px;color: #222222" asp-area="" asp-controller="users" asp-action="Login">Đăng Nhập</a>
+                    }
+                </li>
+                <li class="nav-item">
+                    @if (@User.Identity.IsAuthenticated)
+                    {
+                        <a class="dn1" asp-area="" asp-controller="users" asp-action="Logout">Thoát</a>
+                    }
+                </li>
+            </ul>
+        </div>
+    </header>
+    <div class="m1">Các thông số của máy hàn</div>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+
+    <footer class="border-top footer text-muted">
+        @*<div class="container">
+        &copy; 2023 - web2 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+        *@
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+

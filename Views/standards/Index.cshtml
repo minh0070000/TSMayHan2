@@ -1,0 +1,208 @@
+﻿@model IEnumerable<TSMayHan2.Models.standard>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<p>
+    <a asp-action="Bieudo">Xem biểu đồ</a>
+</p>
+<p>
+    <a asp-action="Create">Tạo mới</a>
+</p>
+<div style="max-width:100%;
+     overflow-x: auto;">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.machine_name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cycle_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cycle_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.string_time_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.string_time_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pk_pwr_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.pk_pwr_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.energy_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.energy_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_abs_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_abs_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.weld_col_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.weld_col_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_col_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.total_col_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.trigger_force_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.trigger_force_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.weld_force_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.weld_force_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.freq_chg_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.freq_chg_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.set_ampA_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.set_ampA_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.set_ampB_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.set_ampB_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.velocity_min)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.velocity_max)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.modify_by)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.modify_at)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.machine_name)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cycle_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cycle_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.string_time_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.string_time_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pk_pwr_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.pk_pwr_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.energy_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.energy_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_abs_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_abs_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.weld_col_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.weld_col_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_col_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.total_col_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trigger_force_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.trigger_force_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.weld_force_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.weld_force_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.freq_chg_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.freq_chg_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.set_ampA_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.set_ampA_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.set_ampB_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.set_ampB_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.velocity_min)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.velocity_max)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.modify_by)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.modify_at)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.machine_name">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.machine_name">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.machine_name">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

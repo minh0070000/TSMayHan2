@@ -1,0 +1,130 @@
+body {
+    margin: 0px !important;
+}
+
+header {
+    width: auto;
+    height: 90px;
+    background-color: #66B2FF;
+    display: flex;
+    padding-top: 10px;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    width: auto;
+    margin-right: 400px;
+}
+
+.menu1 {
+    display: flex;
+    width: auto;
+    list-style-type: none;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
+}
+
+.iconuser {
+    margin-top: 20px !important;
+    width: auto;
+    height: 30px;
+    margin-top: 5px;
+    display: flex;
+}
+
+.menu1 {
+    margin-top: 15px !important;
+}
+
+.text-dark {
+    border: 2px !important;
+    color: #222222 !important;
+}
+
+.dn {
+    font-size: 15px;
+    width: auto;
+    display: flex;
+    margin-top: 5px;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 300;
+    color: #fff;
+    list-style: none;
+    margin-left: -30px;
+}
+
+    .dn li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+.dn1 {
+    margin-left: 10px !important;
+    color: #222222 !important;
+}
+
+.m1 {
+    font-size: 30px;
+    justify-content: center;
+    color: red;
+    font-weight: 900;
+    display: flex;
+}
+
+.table1 {
+    justify-content: center;
+    display: flex;
+    border: 1px solid black;
+}
+
+table {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+    padding: 5px;
+}
+
+td {
+    padding: 10px;
+}
+
+
+footer {
+    width: auto;
+    height: 70px;
+    background-color: #66B2FF;
+}
+
+.butterfly-container {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.butterfly-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: butterfly-flutter 2s infinite;
+}
+
+@keyframes butterfly-flutter {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(50px) translateY(-50px) rotate(30deg);
+    }
+
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+}
